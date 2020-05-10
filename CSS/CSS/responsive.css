@@ -1,0 +1,70 @@
+@media screen and (min-width:481px) {
+
+    .container {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .top-title h1 {
+        font-size: 2em;
+    }
+    .top-title h2 {
+        font-size: 1em;
+    }
+    .skill-data {
+        border: 1px solid black;
+        margin: 1em;
+        padding: 15px;
+        text-align: center;
+        font-size: 1em;
+        border-radius: 1em;
+        
+    }
+
+
+}
+@media screen and (min-width:1024px) {
+
+
+    .container {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .top-title h1 {
+        font-size: 3em;
+    }
+    .top-title h2 {
+        font-size: 2em;
+    }
+    .profile {
+        display: flex;
+    }
+    .profile-info {
+        width:100%;
+    }
+    .profile-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .skill-web {
+        display: flex;
+        
+    }
+    .skill-data {
+        border: 1px solid black;
+        margin: 1em;
+        padding: 15px;
+        text-align: center;
+        font-size: 1em;
+        border-radius: 1em;
+        width: 33%;
+    }
+    .works {
+        display: flex;
+    }
+    .work-data {
+        width: 50%;
+    }
+    .heading {
+        font-size: 1em;
+    }
+}

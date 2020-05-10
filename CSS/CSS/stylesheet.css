@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    line-height: 1.5;
+    font-style: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+@font-face {
+    font-family: 'mkpop';
+    src: url('851MkPOP_002.ttf') format('truetype');
+}
+li {
+    list-style: none;
+}
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+header {
+
+    height: 10%;
+    width: 100%;
+    opacity: 0.8;
+}
+body {
+    min-width: 1024px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+.page {
+    border-top: 1px solid black;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+
+}
+.global-nav {
+    position: fixed;
+    right: -320px; /* これで隠れる */
+    top: 0;
+    width: 300px; /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+}
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 300;
+}
+.global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.global-nav__item {
+    text-align: center;
+    padding: 0 14px;
+}
+.global-nav__item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+}
+.global-nav__item a:hover {
+    background-color: #eee;
+}
+.hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 1px;
+    background-color: #111;
+    transition: all .6s;
+}
+.hamburger__line--1 {
+    top: 14px;
+}
+.hamburger__line--2 {
+    top: 20px;
+}
+.hamburger__line--3 {
+    top: 26px;
+}
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+    right: 0;
+}
+.nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+}
+.nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+}
+.nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+
+.page-title{
+    font-size: 2em;
+    text-align: center;
+    vertical-align: auto;  
+    
+}
+
+
+/* topのcss
+・中央揃え
+・背景画像
+・h1タイトル ボーダーで囲う
+・h2　少し小さめ　
+タイトルの文字の太さは普通
+・SNSアイコン 横並び*/
+
+
+
+.top-wrapper {
+    padding:10% 0 10% 0;
+    background-image: url(../image/header.png);
+    background-size: cover;
+    font-family: 'Segoe Script','Chalkduster';
+    text-align: center;
+    max-height:100%;
+}
+
+.top-title {
+    letter-spacing: 1.5;
+    border: thin solid silver;
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+    color: blanchedalmond;
+    margin: 0 15%;
+    display: none;
+}
+.top-title h1 {
+    font-size: 1.2em;
+}
+.top-title h2 {
+    font-size: 0.9em;
+}
+.sns {
+    padding-top: 40px;
+    
+}
+.twitter, .instagram {
+    padding: 0 20px;
+    
+}
+.twitter, .instagram{
+    display: none;
+}
+
+/* menu */
+
+.menu {
+    width: 100%;
+    margin-top: 2em; 
+    display: flex;
+
+}
+.menu-icon {
+    width: 25%;
+    display: none;    
+}
+ 
+.heading {
+    padding: 50px 0 50px 0;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'mkpop';
+    font-size: 0.9em;
+    margin: 0 0.5em;
+    
+}
+.heading h1 {
+    font-size: 3em;
+}
+.heading p {
+    padding-top: 20px;
+    font-size: 2em;
+}
+
+/*  プロフィール */
+#profile i {
+    border-right: 3px solid red;
+    padding: 0 0.3em;
+    
+}
+
+
+.profile {
+    display: block;
+    padding-top: 2em;
+    width: 100%;
+
+}
+.profile-info {
+    text-align: center;
+    font-family: 'Courier';
+    font-size: 1em;
+    width: 100%;
+}
+.profile-text {
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Courier';
+    margin: 0 auto;
+    margin: 0 0.3em;
+}
+.profile-info img{
+    box-shadow: 2px 3px black;
+}
+.info {
+    padding: 1em 0;
+    font-family: 'Arial';
+    margin: 0 auto;
+    text-align: center;
+}
+.text-content {
+    background-color: coral;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+/* スキルページ「 */
+.skill-web {
+    display: block;
+    padding-top: 3em;
+
+}
+.skill-data {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 1em;
+    
+}
+#skill i {
+    border-left: 3px solid yellowgreen;
+    padding: 0 0.3em;
+}
+.skill-data h3 {
+    padding: 1.5em;
+    font-size: 1.5;
+}
+.skill-data table {
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 1em 0;
+    
+}
+.design {
+
+    box-shadow: 0.5em 0.5em rgb(255, 0, 221);
+  
+}
+.frontend {
+
+    box-shadow: 0.5em 0.5em yellowgreen;
+}
+.server {
+
+    box-shadow: 0.5em 0.5em rgb(0, 195, 255);
+}
+
+/* work */
+
+#works i {
+    border-right: 3px solid rgb(0, 204, 255);
+    padding: 0 0.3em;
+    
+}
+.works {
+    display: block;
+    justify-content: center;
+    padding-top: 3em;
+    width: auto;
+}
+.works img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.work-over-view {
+    width: 80%;
+    text-align: center;
+    padding-top: 1em;
+    line-height: 1em;
+
+}
+
+.work-data {
+    margin: 0 10px 0 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 1em;
+    display: block;
+}
+
+/* contact */
+
+#contact i {
+    border-left: 3px solid pink;
+    padding: 0 0.3em;
+    
+}
+.contact {
+    text-align: center;
+    padding-top: 2em;
+}
+.message {
+    text-align: center;
+    padding-top: 2em;
+    margin: 0 0.5em;
+
+}
+.message h4 {
+    font-size: 1.3em;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
+    border-top: black 1px solid;
+}
+.footer-cp {
+    margin: 0 auto;
+    padding-top: 1.2em;
+    vertical-align: middle;
+}
+.banner {
+    margin: 0 auto;
+    text-align: center;
+}
