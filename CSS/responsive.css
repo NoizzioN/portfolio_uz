@@ -59,9 +59,11 @@
     }
     .skill-data table {
         margin: 0 auto;
-        font-size: 0.9em;
-        padding: 1em 0;
-        
+        font-size: 1em;
+        padding: 1em 0;   
+    }
+    .skill-data p {
+        font-size: 1em;
     }
     .works {
         display: flex;

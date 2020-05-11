@@ -159,7 +159,7 @@ body {
     padding:10% 0 10% 0;
     background-image: url(../image/header.png);
     background-size: cover;
-    font-family: 'Segoe Script','Chalkduster';
+    font-family: 'Courier',sans-serif;
     text-align: center;
     max-height:100%;
 }
@@ -220,6 +220,7 @@ body {
     padding-top: 20px;
     font-size: 2em;
 }
+
 
 /*  プロフィール */
 #profile i {
