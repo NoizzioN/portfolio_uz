@@ -19,6 +19,14 @@
         border-radius: 1em;
         
     }
+    .skill-data table {
+        margin: 0 auto;
+        font-size: 1.5em;
+        padding: 1em 0;   
+    }
+    .skill-data p {
+        font-size: 1.5em;
+    }
 
 
 }
