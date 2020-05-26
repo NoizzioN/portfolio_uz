@@ -4,11 +4,9 @@
     font-style: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
+
 }
-@font-face {
-    font-family: 'mkpop';
-    src: url('851MkPOP_002.ttf') format('truetype');
-}
+
 li {
     list-style: none;
 }
@@ -43,29 +41,30 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 40px;
-
+    height: 80px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9999;
 }
 .global-nav {
     position: fixed;
-    right: -320px; /* これで隠れる */
+    right: -100%; /* これで隠れる */
     top: 0;
-    width: 300px; /* スマホに収まるくらい */
+    width: 100%; /* 収まるくらい */
     height: 100vh;
     padding-top: 40px;
     background-color: #fff;
     transition: all .6s;
-    z-index: 200;
+    z-index: 9999;
     overflow-y: auto; /* メニューが多くなったらスクロールできるように */
 }
 .hamburger {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
-    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    right: 10px;
+    top: 10px;
+    width: 100px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 100px; /* クリックしやすいようにちゃんと高さを指定する */
     cursor: pointer;
-    z-index: 300;
+    z-index: 9999 !important;
 }
 .global-nav__list {
     margin: 0;
@@ -82,26 +81,27 @@ body {
     border-bottom: 1px solid #eee;
     text-decoration: none;
     color: #111;
+    font-size: 42px
 }
 .global-nav__item a:hover {
     background-color: #eee;
 }
 .hamburger__line {
     position: absolute;
-    left: 11px;
-    width: 18px;
-    height: 1px;
+    right: 11px;
+    width: 50px;
+    height: 2px;
     background-color: #111;
-    transition: all .6s;
+    transition: all 0.6s;
 }
 .hamburger__line--1 {
-    top: 14px;
+    top: 10px;
 }
 .hamburger__line--2 {
     top: 20px;
 }
 .hamburger__line--3 {
-    top: 26px;
+    top: 30px;
 }
 .black-bg {
     position: fixed;
@@ -109,7 +109,7 @@ body {
     top: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: 100;
+    z-index: 9998 !important;
     background-color: #000;
     opacity: 0;
     visibility: hidden;
@@ -121,7 +121,7 @@ body {
     right: 0;
 }
 .nav-open .black-bg {
-    opacity: .8;
+    opacity: 0.8;
     visibility: visible;
 }
 .nav-open .hamburger__line--1 {
@@ -174,10 +174,10 @@ body {
     display: none;
 }
 .top-title h1 {
-    font-size: 32px;
+    font-size: 42px;
 }
 .top-title h2 {
-    font-size: 24px;
+    font-size: 32px;
 }
 .sns {
     padding-top: 40px;
@@ -197,6 +197,7 @@ body {
     width: 100%;
     margin-top: 2em; 
     display: flex;
+    font-size: 24px;
 
 }
 .menu-icon {
@@ -208,17 +209,9 @@ body {
     padding: 50px 0 50px 0;
     font-weight: normal;
     text-align: center;
-    font-family: 'mkpop';
-    font-size: 24px;
-    margin: 0 0.5em;
-    
-}
-.heading h1 {
-    font-size: 24px;
-}
-.heading p {
-    padding-top: 20px;
-    font-size: 2em;
+    font-family: YuGothic,'Yu Gothic','HanziPen SC','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    font-size: 32px;
+    margin: 0 0.5em; 
 }
 
 
@@ -239,7 +232,7 @@ body {
 .profile-info {
     text-align: center;
     font-family: 'Courier';
-    font-size: 18px;
+    font-size: 28px;
     width: 100%;
 }
 .profile-text {
@@ -256,13 +249,17 @@ body {
     padding: 1em 0;
     font-family: 'Arial';
     margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 24px;
+    width: 300px;
 }
+
 .text-content {
-    background-color: coral;
+    background-color: darkslategray;
     padding: 2em;
     border-radius: 2em;
+    font-size: 28px;
+    color: white;
 }
 
 /* スキルページ「 */
@@ -331,15 +328,32 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
+    position: relative;
+    z-index: -1 !important;
+
+}
+.work-data:hover .work-over-view{
+    opacity: 1.0;
 }
 .work-over-view {
-    width: 80%;
-    text-align: center;
-    padding-top: 1em;
-    line-height: 1.2em;
+	width: 100%;
+	height:	100%;
+	position: absolute;	/* 絶対位置指定 */
+	top: 0;
+	left: 0;
+	opacity: 0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+    transition:		all 0.2s ease;
+    z-index: -1 !important;
 
 }
-
+.work-over-view p {
+    font-size:130%;
+	text-align: center;
+	padding-top:80px;
+	color:#fff;
+}
 .work-data {
     margin: 0 10px 0 10px;
     padding: 15px;
@@ -347,6 +361,8 @@ body {
     font-size: 20px;
     border-radius: 1em;
     display: block;
+    position: relative;
+    overflow: hidden;
 }
 
 /* contact */
@@ -367,7 +383,7 @@ body {
 
 }
 .message p {
-    font-size: 18px;
+    font-size: 24px;
 }
 .message h4 {
     font-size: 24px;

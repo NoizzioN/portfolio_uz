@@ -5,10 +5,13 @@
         width: 80%;
     }
     .top-title h1 {
-        font-size: 2em;
+        font-size: 32px;
     }
     .top-title h2 {
-        font-size: 1em;
+        font-size: 26px;
+    }
+    .text-content {
+        font-size: 18px;
     }
     .skill-data {
         border: 1px solid black;
@@ -52,6 +55,9 @@
     .profile-text {
         width: 80%;
         margin: 0 auto;
+    }
+    .text-content {
+        font-size: 18px;
     }
     .skill-web {
         display: flex;
